@@ -1,33 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import './style/App.scss'
+
+import React, {useEffect, useState} from "react";
+
+import {Routes, Route} from "react-router-dom";
+import Loader from "./components/Loader.jsx";
+import HomePage from "./pages/Home.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [loading, setLoading] = useState(false);
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 1500);
+    }, []);
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="main">
+          {loading ? (<Loader />) : (<div></div>)}
+          <Routes>
+              <Route path='/' element={<HomePage/>} />
+              <Route path='*' element={<NotFound/>} />
+          </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
   )
 }
 

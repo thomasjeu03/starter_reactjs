@@ -1,0 +1,42 @@
+// --- C O L O R S --- //
+
+:root{
+  --light: .7;
+  --lighter: .4;
+
+  /*Primary color*/
+  --primary-rgb: 75, 122, 220 ;
+  --primary: rgb(var(--primary-rgb));
+  --primary-light: rgb(var(--primary-rgb), var(--light));
+  --primary-lighter: rgb(var(--primary-rgb), var(--lighter));
+
+  /*Secondary color*/
+  --secondary-rgb: 248, 238, 186 ;
+  --secondary: rgb(var(--secondary-rgb));
+  --secondary-light: rgb(var(--secondary-rgb), var(--light));
+  --secondary-lighter: rgb(var(--secondary-rgb), var(--lighter));
+
+  /*Black color*/
+  --black-rgb: 35, 24, 7 ;
+  --black: rgb(var(--black-rgb));
+  --black-light: rgb(var(--black-rgb), var(--light));
+  --black-lighter: rgb(var(--black-rgb), var(--lighter));
+
+  /*White color*/
+  --white-rgb: 249, 249, 249 ;
+  --white: rgb(var(--white-rgb));
+  --white-light: rgb(var(--white-rgb), var(--light));
+  --white-lighter: rgb(var(--white-rgb), var(--lighter));
+}
+.white{
+  color: var(--white);
+}
+.black{
+  color: var(--black);
+}
+.primary{
+  color: var(--primary);
+}
+.secondary{
+  color: var(--secondary);
+}

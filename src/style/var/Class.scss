@@ -1,0 +1,116 @@
+.hover-effect:before{
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: -3px;
+  right: 0;
+  background-color: var(--black);
+  transition: 0.4s ease-in-out;
+}
+.hover-effect:hover:before{
+  transition: 0.4s ease-in-out;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary);
+}
+.hover-effect{
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+}
+.hover-effect div{
+  pointer-events: none;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transition: transform .4s;
+}
+.hover-effect div>span{
+  display: block;
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  transition: opacity .4s,color .4s,transform .4s;
+}
+.hover-effect div>span:first-child{
+  transform: rotateX(0deg) translate3d(0,0%,0);
+}
+.hover-effect div>span:nth-child(2){
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  color: var(--primary);
+  transform: rotateX(-90deg) translate3d(0,50%,0);
+  transform-origin: bottom center;
+  transition: opacity .4s,visibility 1ms .4s,color .4s,transform .4s;
+  visibility: hidden;
+}
+.hover-effect:hover div>span:first-child{
+  opacity: 0;
+  visibility: hidden;
+  transform: rotateX(90deg) translate3d(0,-100%,0);
+  -webkit-transform: rotateX(90deg) translate3d(0,-100%,0);
+  transition: opacity .4s,visibility 1ms .4s,color .4s,transform .4s;
+}
+.hover-effect:hover div>span:nth-child(2){
+  opacity: 1;
+  visibility: visible;
+  transform: rotateX(0deg) translate3d(0,0,0);
+  -webkit-transform: rotateX(0deg) translate3d(0,0%,0);
+  transition: opacity .4s,color .4s,transform .4s;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: auto;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: auto;
+}
+
+.border{
+  border: var(--border-black) !important;
+}
+
+.border-radius{
+  border-radius: var(--radius-20);
+}
+
+.w100{
+  width: 100%;
+}
+
+.dnone{
+  display: none !important;
+}
+
+.dflex{
+  display: flex !important;
+}
+
+.disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  -ms-filter: grayscale(1);
+  filter: grayscale(1);
+  opacity: 0.3;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

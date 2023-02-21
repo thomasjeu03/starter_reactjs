@@ -60,6 +60,23 @@
   transition: opacity .4s,color .4s,transform .4s;
 }
 
+.cursor_follower{
+  --size-outer: max(22px,2vw);
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  background: var(--white);
+  width: var(--size-outer);
+  height: var(--size-outer);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  @media only screen and (max-width: 900px){
+    display: none;
+  }
+}
+
 .grid2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -1,0 +1,16 @@
+@mixin lineClamp($nbline){
+  overflow: hidden;
+  width: 100%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $nbline;
+  -webkit-box-orient: vertical;
+}
+
+@mixin flex($orientation, $align, $justify){
+  width: 100%;
+  display: flex;
+  flex-direction: $orientation;
+  align-items: $align;
+  justify-content: $justify;
+}

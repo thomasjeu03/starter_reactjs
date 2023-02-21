@@ -1,0 +1,16 @@
+:root{
+  /*Spacing*/
+  --1m: 8px;
+  --2m: calc(2 * var(--1m));
+  --3m: calc(3 * var(--1m));
+  --4m: calc(4 * var(--1m));
+  --5m: calc(5 * var(--1m));
+  --6m: calc(6 * var(--1m));
+  --7m: calc(7 * var(--1m));
+  --8m: calc(8 * var(--1m));
+  --9m: calc(9 * var(--1m));
+  --10m: calc(2 * var(--5m));
+
+  --border-black: 2px solid var(--black);
+  --radius-20: 20px;
+}

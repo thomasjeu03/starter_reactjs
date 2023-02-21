@@ -17,6 +17,7 @@
 html{
   font-family: var(--text-font);
   font-size: var(--font-size);
+  line-height: var(--3m);
   color: var(--black);
   background: var(--white);
 
@@ -24,7 +25,10 @@ html{
   scroll-behavior: smooth;
 }
 body{
-  //cursor: none;
+  cursor: none;
+  @media only screen and (max-width: 500px){
+    cursor: initial;
+  }
 }
 figure{
   width: 100%;
@@ -41,6 +45,7 @@ p{
 }
 Link{
   cursor: pointer;
+  color: var(--primary);
 }
 input,textarea, .input,select{
   background: none;
@@ -63,6 +68,7 @@ li{
 a{
   text-decoration: none;
   width: fit-content;
+  color: var(--primary);
   &:hover{
     .cursor_follower{
       transform: scale(1.5);

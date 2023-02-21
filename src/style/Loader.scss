@@ -1,5 +1,5 @@
 .Loader{
-  z-index: 49;
+  z-index: 500;
   position: fixed;
   top: 0;
   overflow: hidden;
@@ -12,7 +12,8 @@
   justify-content: center;
   transition: 1s ease-out;
   transform: translateY(0%);
-  background: var(--primary);
+  background: var(--black);
+  color: var(--white);
 }
 .disparition{
   z-index: -50;

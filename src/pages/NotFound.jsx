@@ -2,7 +2,7 @@ import '../style/404.scss'
 
 function NotFound() {
     return (
-        <div className="NotFoundPage_Container">
+        <div className="NotFound page-template">
             <h1>404</h1>
             <h2>Page Not Found</h2>
         </div>

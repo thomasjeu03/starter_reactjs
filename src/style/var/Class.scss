@@ -62,7 +62,7 @@
 }
 
 .cursor_follower{
-  --size-outer: max(22px,2vw);
+  --size-outer: 22px;
   position: fixed;
   z-index: 99999;
   top: 0;
